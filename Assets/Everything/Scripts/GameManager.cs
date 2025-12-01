@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public float timeRemaining;
     public float realScore;
     public GameObject prefabToCopy;
+    public hIghscoreChange high;
 
 
     void awake(){
@@ -40,7 +41,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Failure");
             fail = true;
-            
+            high.MainScore();
             GameObject tempPawn;
             tempPawn = Instantiate(prefabToCopy, Vector3.zero, Quaternion.identity) as GameObject;
             Destroy(game);

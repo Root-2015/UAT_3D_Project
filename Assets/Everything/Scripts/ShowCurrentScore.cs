@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-public class showHighScore : MonoBehaviour
+public class ShowCurrentScore : MonoBehaviour
 {
     public TMP_Text text;
     public Bestscore high;
@@ -9,6 +9,6 @@ public class showHighScore : MonoBehaviour
     void Start()
     {
         high = FindObjectOfType<Bestscore>();
-        text.text = "High score: " + high.bestScore;
+        text.text = "Last score: " + high.currentScore;
     }
 }
